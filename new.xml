@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patients>
+ <Patient id="be129">
+ <id>001</id>
+ <firstname>M</firstname>
+ <lastname>Arun</lastname>
+ <Disease>Cancer</Disease>
+ <Appointment>Dr.Durga</Appointment>
+ <room>19</room>
+ </Patient>
+ <Patient id="be130">
+ <id>021</id>
+ <firstname>K</firstname>
+ <lastname>Levi</lastname>
+ <Disease>Fewer</Disease>
+ <Appointment>Dr.Sree</Appointment>
+ <room>14</room>
+ </Patient>
+ <Patient id="be131">
+ <id>022</id>
+ <firstname>A</firstname>
+ <lastname>Ayan</lastname>
+ <Disease>Leg Pain</Disease>
+ <Appointment>Dr.Chandu</Appointment>
+ <room>21</room>
+ </Patient>
+ <Patient id="be132">
+ <id>014</id>
+ <firstname>R </firstname>
+ <lastname>Satya</lastname>
+ <Disease>Headache</Disease>
+ <Appointment>Dr.Chandana</Appointment>
+ <room>22</room>
+ </Patient>
+ <Patient id="be133">
+ <id>041</id>
+ <firstname>CH</firstname>
+ <lastname>Nasir</lastname>
+ <Disease>Cold</Disease>
+ <Appointment>Dr.Satya</Appointment>
+ <room>24</room>
+ </Patient>
+ <!--<Patient id="be135">
+ <id>Engineer</id>
+ <firstname>Vikash</firstname>
+ <lastname>kumar</lastname>
+ <Disease>Management</Disease>
+ <Appointment>216</Appointment>
+ <room>26</room>
+ </Patient>
+ <Patient id="be136">
+ <id>Engineer</id>
+ <firstname>Suvam</firstname>
+ <lastname>Basak</lastname>
+ <Disease>Accts Payable</Disease>
+ <Appointment>326</Appointment>
+ <room>30</room>
+ </Patient>
+ <Patient id="be135">
+ <id>Engineer</id>
+ <firstname>Abhinav</firstname>
+ <lastname>kumar</lastname>
+ <Disease>Management</Disease>
+ <Appointment>216</Appointment>
+ <room>32</room>
+ </Patient>
+ <Patient id="be131">
+ <id>Engineer</id>
+ <firstname>DhanPal</firstname>
+ <lastname>Singh</lastname>
+ <Disease>Materials</Disease>
+ <Appointment>327</Appointment>
+ <room>21</room>
+ </Patient>-->
+</Patients>
