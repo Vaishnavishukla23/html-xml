@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+ <title>Reads the XML data using JavaScript(jquery)</title>
+ <style>
+ body {
+ background-image: url('bg.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
+ font-family: Arial, sans-serif;
+ color: #333;
+ text-align: center;
+ }
+ p{
+ text-align:center; 
+ background-color: antiquewhite;
+ }
+ h1 {
+ text-align: center;
+ margin-top: 50px;
+ }
+ button {
+ display: block;
+ margin: 0 auto;
+ padding: 12px 24px;
+ border: none;
+ border-radius: 4px;
+ background-color: #007bff;
+ color: #fff;
+ font-size: 16px;
+ cursor: pointer;
+ transition: all 0.2s ease-in-out;
+ }
+ button:hover {
+ background-color: #0062cc;
+ }
+ table {
+ border-collapse: collapse;
+ width: 90%;
+ margin: 50px auto 0;
+ background-color: #fff;
+ box-shadow: 0 0 10px rgba(0,0,0,0.2);
+ }
+ th, td {
+ padding: 12px;
+ text-align: left;
+ border-bottom: 1px solid #ddd;
+ }
+ th {
+ background-color: #f2f2f2;
+ font-weight: bold;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ }
+ tr:hover {background-color: #f5f5f5;}
+ </style>
+ <!--JavaScript-->
+ <script>
+ function loadXMLDoc() {
+ var xmlhttp = new XMLHttpRequest();
+ xmlhttp.onreadystatechange = function () {
+ // Request finished and response
+ // is ready and Status is "OK"
+ if (this.readyState == 4 && this.status == 200) {
+ empDetails(this);
+ }
+ };
+ // Patient.xml is the external xml file
+ xmlhttp.open("GET", "Patients.xml", true);
+ xmlhttp.send();
+ }
+ function empDetails(xml) {
+ var i;
+ var xmlDoc = xml.responseXML;
+ var table =
+ `<tr><th>id</th><th>Firstname</th><th>Lastname</th>
+ <th>Disease</th>
+ <th>Appointment</th><th>Room</th>
+ </tr>`;
+ var x = xmlDoc.getElementsByTagName("Patient");
+ // Start to fetch the data by using TagName
+ for (i = 0; i < x.length; i++) {
+ table += "<tr><td>" +
+ x[i].getElementsByTagName("id")[0]
+ .childNodes[0].nodeValue + "</td><td>" +
+ x[i].getElementsByTagName("firstname")[0]
+ .childNodes[0].nodeValue + "</td><td>" +
+ x[i].getElementsByTagName("lastname")[0]
+ .childNodes[0].nodeValue + "</td><td>" +
+ x[i].getElementsByTagName("Disease")[0]
+ .childNodes[0].nodeValue + "</td><td>" +
+ x[i].getElementsByTagName("Appointment")[0]
+ .childNodes[0].nodeValue + "</td><td>" +
+ x[i].getElementsByTagName("room")[0]
+ .childNodes[0].nodeValue + "</td></tr>";
+ }
+ // Print the xml data in table form
+ document.getElementById("id").innerHTML = table;
+ }
+ </script>
+</head>
+<body>
+ <p> <h1> DC hospitals </h1> <br>
+ We care for u...!
+ </p>
+ <center>
+ <button type="button" class="button"
+ onclick="loadXMLDoc()">
+ Get Patients Details
+ </button>
+ </center>
+ <br><br>
+ <table id="id"></table>
+</body>
+</html>
